@@ -1,0 +1,74 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cyan-7);
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 4rem;
+    text-align: center;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+}
+
+.animationContainer {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: -4rem;
+    margin-bottom: -10rem;
+}
+
+.howToUse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4rem 4rem;
+    background-color: var(--gray-3);
+    flex: 1;
+}
+
+.headerTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.headerTitle img {
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.headerTitle h1 {
+    margin: 0;
+}
+
+.logo {
+    max-height: 150px;
+    object-fit: contain;
+}

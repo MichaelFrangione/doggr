@@ -1,0 +1,51 @@
+.breedCard {
+    padding: 2rem;
+    background-color: var(--gray-2);
+    border-radius: 8px;
+    border: 1px solid var(--gray-5);
+    text-align: left;
+}
+
+.matchedAttributeItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.matchedAttributeLabel {
+    min-width: 220px;
+}
+
+.matchedAttributesContainer {
+    margin-bottom: 24px;
+    flex: 1 1 50%;
+}
+
+.breedDetailsContainer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex: 1 1 50%;
+}
+
+.separator {
+    margin: 50px 0;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.matchScoreContainer {
+    margin-bottom: 16px;
+}
+
+.dogImageContainer {
+    width: 350px;
+    height: 350px;
+    background-color: var(--gray-2);
+    border-radius: 8px;
+    border: 1px solid var(--gray-5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+}

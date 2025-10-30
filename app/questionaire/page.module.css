@@ -1,0 +1,13 @@
+.recommendationCard {
+    padding: 2rem;
+    background-color: var(--gray-2);
+    border-radius: 8px;
+    border: 1px solid var(--gray-5);
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recommendationCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

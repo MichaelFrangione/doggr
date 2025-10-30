@@ -1,0 +1,46 @@
+:root {
+  /* Base colors */
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Radix complements - custom variables that work alongside Radix theme */
+  --border-default: rgba(0, 0, 0, 0.1);
+  --text-muted: #6b7280;
+  --surface-elevated: #ffffff;
+
+  /* Spacing scale (supplements Radix's spacing) */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Typography */
+  --font-family-body: Arial, Helvetica, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-body);
+}
+
+button {
+  cursor: pointer !important;
+  background-color: var(--gray-3);
+  color: var(--foreground);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,277 @@
+Active, Outgoing, Sweet-Natured
+Active, Proud, Very Smart
+Active, Proud, Very Smart
+Adaptable, Friendly, Gentle
+Adaptable, Gentle, Smart
+Adaptable, Playful, Smart
+Affectionate, Active, Enthusiastic
+Affectionate, Adaptable, Gentle
+Affectionate, Adventurous, Athletic
+Affectionate, Alert, Curious
+Affectionate, Alert, Intelligent
+Affectionate, Alert, Lively
+Affectionate, Bright, Sensitive
+Affectionate, Confident, Bold
+Affectionate, Courageous, Spirited
+Affectionate, Courageous, Strong-Willed
+Affectionate, Dignified, Even-Tempered
+Affectionate, Eager, Enthusiastic
+Affectionate, Friendly, Independent
+Affectionate, Gentle, Energetic
+Affectionate, Gentle, Graceful
+Affectionate, Gentle, Sociable
+Affectionate, Happy, Plucky
+Affectionate, Intelligent, Active
+Affectionate, Intelligent, Enthusiastic
+Affectionate, Intelligent, Kind
+Affectionate, Intelligent, Majestic
+Affectionate, Intelligent, Outgoing
+Affectionate, Keen, Undemanding
+Affectionate, Loyal, Brave
+Affectionate, Loyal, Courageous
+Affectionate, Loyal, Noble
+Affectionate, Loyal, Playful
+Affectionate, Loyal, Regal in Manner
+Affectionate, Loyal, Regally Dignified
+Affectionate, Loyal, Sensitive
+Affectionate, Loyal, Smart
+Affectionate, Outgoing, Positive
+Affectionate, Playful, Calm
+Affectionate, Playful, Outgoing
+Affectionate, Smart, Alert
+Affectionate, Smart, Energetic
+Affectionate, Smart, Energetic
+Affectionate, Sprightly, Tomboyish
+Affectionate, Versatile, Intelligent
+Agile, Intelligent, Self-Confident
+Agile, Spirited, Intelligent
+Agile, Versatile, Lively
+Agile, Versatile, Regal
+Alert, Active, Attentive
+Alert, Cheerful, Busy
+Alert, Curious, Pleasant
+Alert, Eager, Intelligent
+Alert, Faithful, Intelligent
+Alert, Happy, Vivacious
+Alert, Inquisitive, Lively
+Alert, Intelligent, Bold
+Alert, Intelligent, Brave
+Alert, Outgoing, Sense Of Humor
+Alert, Trainable, Comical
+Bold, Dashing, Tenderhearted
+Bright, Fun-Loving, Active
+Bright, Fun-Loving, Upbeat
+Bright, Watchful, Serious-Minded
+Charming, Bright, Happy-Go-Lucky
+Charming, Graceful, Sassy
+Charming, Mischievous, Loving
+Charming, Noble, Loving
+Charming, Patient, Low-Key
+Cheerful, Optimistic, Good-Humored
+Clever, Adventurous, Family-Oriented
+Clever, Brave, Tenacious
+Confident, Alert, Curious
+Confident, Alert, Gregarious
+Confident, Alert, Vigilant
+Confident, Calm, Family-Oriented
+Confident, Calm, Powerful
+Confident, Calm, Strong-Willed
+Confident, Clever, Lively
+Confident, Courageous, Smart
+Confident, Famously Funny, Fearless
+Confident, Independent, Spirited
+Confident, Intelligent, Calm
+Confident, Proud, Wickedly Smart
+Confident, Smart, Comical
+Confident, Smart, Faithful
+Confident, Smart, Good-Natured
+Confident, Smart, Hardworking
+Confident, Smart, Perceptive
+Courageous, Alert, Determined
+Courageous, Alert, Faithful
+Courageous, Alert, Intelligent
+Courageous, Dignified, Calm
+Courageous, Dignified, Good-Natured
+Courageous, Dignified, Profoundly Loyal
+Courageous, Good-Natured, Determined
+Courageous, Good-Tempered, Canny
+Courageous, Intelligent, Hardworking
+Courageous, Intelligent, Vivacious
+Courageous, Spirited, Determined
+Devoted, Graceful, Proud
+Devoted, Lively, Attentive
+Dignified, Alert, Devoted
+Dignified, Bright, Serious-Minded
+Dignified, Profoundly Loyal, Aristocratic
+Dignified, Smart, Outgoing
+Eager, Happy, Charming
+Easy-Going, Bright, Brave
+Energetic, Alert, Curious
+Energetic, Alert, Enthusiastic
+Energetic, Lively, Ready to Work
+Energetic, Merry, Responsive
+Energetic, Trainable, Attentive
+Even-Tempered, Amiable, Boisterous
+Even-Tempered, Amiable, Eager to Please
+Faithful, Family-Oriented, Dependable
+Faithful, Noble, Docile
+Family-Oriented, Even-Tempered, Polite
+Fearless, Agile, Attentive
+Fearless, Alert, Fun-Loving
+Fearless, Bold, Kind
+Fearless, Fun-Loving, Proud
+Fearless, Patient, Vigilant
+Fearless, Smart, Spirited
+Friendly, Active, Outgoing
+Friendly, Alert, Agile
+Friendly, Alert, Happy
+Friendly, Alert, Intelligent
+Friendly, Alert, Intelligent
+Friendly, Alert, Quick
+Friendly, Bright, Amusing
+Friendly, Bright, Sweet-Natured
+Friendly, Cheerful, Humble
+Friendly, Clever, Athletic
+Friendly, Clever, Courageous
+Friendly, Confident, Bold
+Friendly, Confident, Dependable
+Friendly, Courageous, Calm
+Friendly, Courageous, Intelligent
+Friendly, Curious, Merry
+Friendly, Curious, Spunky
+Friendly, Devoted, Alert and Intelligent
+Friendly, Devoted, Trainable
+Friendly, Eager, Lovable
+Friendly, Energetic, Intelligent
+Friendly, Energetic, Watchful
+Friendly, Fearless, Obedient
+Friendly, Gentle, Playful
+Friendly, Good-Natured, Lively
+Friendly, Happy, Deeply Devoted
+Friendly, Independent, Amusing
+Friendly, Independent, Inquisitive
+Friendly, Inquisitive, Lovable
+Friendly, Intelligent, Devoted
+Friendly, Intelligent, Eager to Please
+Friendly, Lively, Outgoing
+Friendly, Mellow, Merry
+Friendly, Merry, Even-Tempered
+Friendly, Outgoing, People-Oriented
+Friendly, Patient, Dependable
+Friendly, Playful, Inquisitive
+Friendly, Playful, Obedient
+Friendly, Quick, Keenly Alert
+Friendly, Smart, Noble
+Friendly, Smart, Obedient
+Friendly, Smart, Willing to Please
+Friendly, Smart, Willing to Please
+Friendly, Smart, Willing to Please
+Friendly, Spirited, Intelligent
+Friendly, Versatile, Determined
+Friendly, Watchful, Lively
+Friendly, Watchful, Loving
+Gentle, Brave, Noble
+Gentle, Dignified, Independent-Minded
+Gentle, Dignified, Polite
+Gentle, Faithful, Obedient
+Gentle, Independent, Noble
+Gentle, Loyal, Trainable
+Gentle, Playful, Charming
+Gentle, Playful, Intelligent
+Gentle, Smart, Happy
+Gentle, Sociable, Intelligent
+Gentle, Spirited, Bold
+Good-Natured, Calm, Strong
+Good-Natured, Intelligent, Devoted
+Happy, Reserved, Upbeat
+Independent, Alert, Intelligent
+Independent, Courageous, Self-Confident
+Independent, Easy-Going, Sweet-Tempered
+Independent, Energetic, Powerful
+Independent, Happy, Outgoing
+Independent, Reserved, Intelligent
+Independent, Smart, Poised
+Independent, Smart, Proud
+Independent, Sociable, Intelligent
+Inquisitive, Bold, Lively
+Intelligent, Active, Sensitive
+Intelligent, Calm, Powerful
+Intelligent, Devoted, Amusing
+Intelligent, Devoted, Lively
+Intelligent, Devoted, Self-Confident
+Intelligent, Lively, Athletic
+Intelligent, Outgoing, Funny
+Intelligent, Responsive, Loving
+Intelligent, Strong-Willed, Reserved with Strangers
+Loyal, Active, Alert and Intelligent
+Loyal, Agile, Keen
+Loyal, Alert, Calm
+Loyal, Alert, Curious
+Loyal, Alert, Intelligent
+Loyal, Alert, Intelligent
+Loyal, Alert, Trainable
+Loyal, Charming, Frollicking
+Loyal, Dignified, Brave
+Loyal, Dignified, Watchful
+Loyal, Energetic, Alert
+Loyal, Even-Tempered, Determined
+Loyal, Fearless, Alert
+Loyal, Fearless, Sweet
+Loyal, Good-Natured, Intelligent
+Loyal, Good-Natured, Observant
+Loyal, Happy, Entertaining
+Loyal, Hardworking, Even-Tempered
+Loyal, Independent, Agile
+Loyal, Independent, Calm
+Loyal, Independent, Calm
+Loyal, Independent, Confident Guardian
+Loyal, Independent, Courageous
+Loyal, Independent, Deeply Affectionate
+Loyal, Independent, Reserved
+Loyal, Independent, Reserved with Strangers
+Loyal, Independent, Watchful
+Loyal, Intelligent, Active
+Loyal, Intelligent, Active
+Loyal, Intelligent, Sensitive
+Loyal, Loving, Confident Guardian
+Loyal, Mischievous, Outgoing
+Loyal, Playful, Smart
+Loyal, Self-Confident
+Loyal, Smart, Charming
+Loyal, Smart, Enthusiastic
+Loyal, Smart, Home-Loving
+Loyal, Versatile, Intelligent
+Loyal, Versatile, Reserved with Strangers
+Mellow, Amusing, Gentlemanly
+Playful but also Work-Oriented. Very Active and Upbeat.
+Playful, Alert, Sensitive
+Playful, Bright, Self-Confident
+Playful, Charming, Inquisitive
+Playful, Charming, Inquisitive
+Playful, Charming, Lively
+Playful, Charming, Mischievous
+Playful, Curious, Peppy
+Playful, Easy-Going, Devoted
+Playful, Energetic, Bright
+Playful, Hardworking, Brave
+Playful, Intelligent, Lively
+Playful, Perky, Smart
+Playful, Versatile, Intelligent
+Reserved, Graceful, Noble
+Smart, Alert, People-Oriented
+Smart, Bouncy, Charismatic
+Smart, Brave, Courteous
+Smart, Cheerful, Determined
+Smart, Devoted, Tenacious
+Smart, Patient, Calm
+Smart, Patient, Devoted
+Smart, Work-Oriented, Exuberant
+Sociable, Energetic, Intelligent
+Sociable, Patient, Docile
+Spirited, Bright, Keenly Observant
+Sweet, Fun-Loving, Sensitive
+Sweet, Mellow, Sociable
+Sweet, Patient, Devoted
+temperament
+Upbeat, Mischievous, Comical
+Versatile, Calm, Family-Oriented

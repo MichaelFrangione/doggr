@@ -1,0 +1,36 @@
+.doggo {
+    position: absolute;
+    bottom: 50px;
+    right: -240px;
+    width: 200px;
+    height: 200px;
+}
+
+.doggo.slideIn {
+    animation: slideIn 1s ease-in-out 5s forwards;
+}
+
+.doggo.slideOut {
+    animation: slideOut 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        right: -240px;
+    }
+
+    to {
+        right: -40px;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        right: -40px;
+    }
+
+    to {
+        right: -240px;
+        transform: rotate(30deg);
+    }
+}

@@ -1,0 +1,42 @@
+.header {
+    grid-area: header;
+    display: flex;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    align-self: start;
+}
+
+.headerTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.headerTitle img {
+    max-height: 50px;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.headerTitle h1 {
+    margin: 0;
+}
+
+.headerLink {
+    text-decoration: none;
+    color: var(--cyan-8);
+}
+
+.headerLink:hover {
+    color: var(--cyan-10);
+}
+
+.headerLink.active {
+    color: var(--cyan-10);
+    font-weight: bold;
+}
