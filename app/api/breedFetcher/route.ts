@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { Index as UpstashIndex } from '@upstash/vector';
-import 'dotenv/config';
 
 const index = new UpstashIndex();
 

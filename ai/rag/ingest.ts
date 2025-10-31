@@ -1,5 +1,3 @@
-import 'dotenv/config';
-
 import { Index as UpstashIndex } from '@upstash/vector';
 import { parse } from 'csv-parse/sync';
 import fs from 'node:fs';

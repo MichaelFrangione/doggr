@@ -1,6 +1,4 @@
 import { Index as UpstashIndex } from '@upstash/vector';
-import 'dotenv/config';
-import type { DogMetadata } from './types';
 
 const index = new UpstashIndex();
 
