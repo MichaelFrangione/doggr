@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     min-height: 700px;
-    width: 100%;
     max-width: 500px;
     background-color: var(--cyan-3);
     border-radius: 1rem;
@@ -114,14 +113,7 @@
 
 @media (max-width: 768px) {
     .surveyContainer {
-        padding: 1.5rem;
         min-height: auto;
-        margin: 0;
-        border-radius: 0;
-    }
-
-    .questionContainer {
-        margin: 0;
     }
 
     .booleanGroup {

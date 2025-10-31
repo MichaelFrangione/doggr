@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Heading, Text, Button, Flex, RadioGroup } from "@radix-ui/themes";
+import { Heading, Text, Button, Flex, RadioGroup, Container } from "@radix-ui/themes";
 import classNames from "classnames";
 import { QuestionaireAnswer } from "../../../actions";
 import { Pencil1Icon } from '@radix-ui/react-icons';
@@ -210,79 +210,79 @@ export default function Survey({ onComplete }: { onComplete: (questionnaireAnswe
     }
 
     return (
-        <div className={classNames(styles.surveyContainer, {
-            [styles.fadeOut]: isTransitioning,
-            [styles.fadeIn]: !isTransitioning,
-        })}>
-            <Text size="2" color="gray">
-                Question {currentIndex + 1} of {QUESTIONS.length}
-            </Text>
-            <div className={styles.progressBar}>
-                <div
-                    className={styles.progressFill}
-                    style={{ width: `${(currentIndex / QUESTIONS.length) * 100}%` }}
-                />
-            </div>
-            <div key={currentIndex} className={styles.questionContainer}>
+        <Container>
+            <div className={classNames(styles.surveyContainer, {
+                [styles.fadeOut]: isTransitioning,
+                [styles.fadeIn]: !isTransitioning,
+            })}>
+                <Text size="2" color="gray">
+                    Question {currentIndex + 1} of {QUESTIONS.length}
+                </Text>
+                <div className={styles.progressBar}>
+                    <div
+                        className={styles.progressFill}
+                        style={{ width: `${(currentIndex / QUESTIONS.length) * 100}%` }}
+                    />
+                </div>
+                <div key={currentIndex} className={styles.questionContainer}>
+                    <Heading size="7" mb="6" className={styles.question}>
+                        {currentQuestion.question}
+                    </Heading>
 
+                    {currentQuestion.type === "multiple" && currentQuestion.options && (
+                        <RadioGroup.Root
+                            value={answers[currentQuestion.id]}
+                            onValueChange={handleAnswer}
+                            className={styles.optionsGroup}
+                        >
+                            {currentQuestion.options.map((option, index) => (
+                                <RadioGroup.Item
+                                    value={option.id}
+                                    key={index}
+                                    className={styles.option}
+                                >
+                                    {option.text}
+                                </RadioGroup.Item>
+                            ))}
+                        </RadioGroup.Root>
+                    )}
 
-                <Heading size="7" mb="6" className={styles.question}>
-                    {currentQuestion.question}
-                </Heading>
-
-                {currentQuestion.type === "multiple" && currentQuestion.options && (
-                    <RadioGroup.Root
-                        value={answers[currentQuestion.id]}
-                        onValueChange={handleAnswer}
-                        className={styles.optionsGroup}
-                    >
-                        {currentQuestion.options.map((option, index) => (
-                            <RadioGroup.Item
-                                value={option.id}
-                                key={index}
-                                className={styles.option}
+                    {currentQuestion.type === "boolean" && (
+                        <Flex gap="4" justify="center" className={styles.booleanGroup}>
+                            <Button
+                                variant={answers[currentQuestion.id] === "yes" ? "solid" : "outline"}
+                                color="cyan"
+                                size="4"
+                                onClick={() => handleAnswer("yes")}
+                                className={styles.booleanButton}
                             >
-                                {option.text}
-                            </RadioGroup.Item>
-                        ))}
-                    </RadioGroup.Root>
-                )}
+                                Yes
+                            </Button>
+                            <Button
+                                variant={answers[currentQuestion.id] === "no" ? "solid" : "outline"}
+                                color="cyan"
+                                size="4"
+                                onClick={() => handleAnswer("no")}
+                                className={styles.booleanButton}
+                            >
+                                No
+                            </Button>
+                        </Flex>
+                    )}
 
-                {currentQuestion.type === "boolean" && (
-                    <Flex gap="4" justify="center" className={styles.booleanGroup}>
+                    {currentIndex > 0 && !editMode && (
                         <Button
-                            variant={answers[currentQuestion.id] === "yes" ? "solid" : "outline"}
-                            color="cyan"
-                            size="4"
-                            onClick={() => handleAnswer("yes")}
-                            className={styles.booleanButton}
+                            variant="ghost"
+                            color="gray"
+                            size="2"
+                            onClick={handleBack}
+                            className={styles.backButton}
                         >
-                            Yes
+                            ← Back
                         </Button>
-                        <Button
-                            variant={answers[currentQuestion.id] === "no" ? "solid" : "outline"}
-                            color="cyan"
-                            size="4"
-                            onClick={() => handleAnswer("no")}
-                            className={styles.booleanButton}
-                        >
-                            No
-                        </Button>
-                    </Flex>
-                )}
-
-                {currentIndex > 0 && !editMode && (
-                    <Button
-                        variant="ghost"
-                        color="gray"
-                        size="2"
-                        onClick={handleBack}
-                        className={styles.backButton}
-                    >
-                        ← Back
-                    </Button>
-                )}
+                    )}
+                </div>
             </div>
-        </div>
+        </Container>
     );
 }

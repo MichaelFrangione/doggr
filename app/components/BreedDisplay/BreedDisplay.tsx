@@ -45,9 +45,12 @@ export default function BreedDisplay({ breed, onReset, showRecommendationHeader 
                     <Separator className={styles.separator} color="gray" />
                     <div className={styles.detailsContent}>
                         {showRecommendationInfo && (
-                            <RecommendationInfo
-                                matchedAttributes={breed.matchedAttributes}
-                            />
+                            <>
+                                <RecommendationInfo
+                                    matchedAttributes={breed.matchedAttributes}
+                                />
+                                <Separator className={styles.mobileSeparator} color="gray" />
+                            </>
                         )}
                         <BreedDetails
                             size={breed.size}

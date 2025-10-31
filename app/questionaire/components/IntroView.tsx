@@ -1,6 +1,6 @@
 "use client";
 
-import { Heading, Text, Button, Flex } from "@radix-ui/themes";
+import { Heading, Text, Button, Flex, Container } from "@radix-ui/themes";
 import LottieImage from "../../components/lottieImage";
 import happyDogAnimation from "../../assets/cute_dog.json";
 import styles from "../layout.module.css";
@@ -11,7 +11,7 @@ interface IntroViewProps {
 
 export default function IntroView({ onStart }: IntroViewProps) {
     return (
-        <>
+        <Container>
             <Heading size="8" weight="bold" align="center" mb="9">
                 We need to know a little about you!
             </Heading>
@@ -26,7 +26,7 @@ export default function IntroView({ onStart }: IntroViewProps) {
                     Let's Begin
                 </Button>
             </Flex>
-        </>
+        </Container>
     );
 }
 
