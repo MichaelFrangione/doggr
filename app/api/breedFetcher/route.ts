@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
-import { Index as UpstashIndex } from '@upstash/vector';
-
-const index = new UpstashIndex();
+import { index } from "../../../ai/rag/index";
 
 /**
  * Fetch a list of all breed names from Upstash Vector Database

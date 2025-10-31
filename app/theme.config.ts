@@ -8,7 +8,7 @@ export const themeConfig = {
     // Options: tomato, red, ruby, crimson, pink, plum, purple, violet, iris, 
     //          indigo, blue, cyan, teal, jade, green, grass, brown, orange, 
     //          amber, yellow, lime, mint, sky
-    accentColor: 'blue' as const,
+    accentColor: 'cyan' as const,
 
     // Gray scale for text, borders, and backgrounds
     // Options: auto, gray, mauve, slate, sage, olive, sand, gold, bronze

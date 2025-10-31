@@ -4,7 +4,7 @@ import { useState } from "react";
 import Survey from "./components/Survey/Survey";
 import Loading from "../components/loading";
 import ResultsView from "./components/ResultsView/ResultsView";
-import type { DogRecommendation } from "./components/ResultsView/types";
+import type { DogRecommendation } from "@/app/components/BreedDisplay/types";
 import ErrorView from "./components/ErrorView";
 import IntroView from "./components/IntroView";
 import { processQuestionnaireAnswers } from "./utils";

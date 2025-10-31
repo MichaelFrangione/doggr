@@ -1,5 +1,5 @@
 import { findMatchingDogs, QuestionaireAnswer } from "../actions";
-import { DogRecommendation } from "./components/ResultsView/ResultsView";
+import type { DogRecommendation } from "@/app/components/BreedDisplay/types";
 
 export type ProcessResult =
     | { type: 'success'; recommendation: DogRecommendation; }

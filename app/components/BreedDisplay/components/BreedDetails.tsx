@@ -3,6 +3,7 @@
 import { Heading, Text, Flex } from "@radix-ui/themes";
 import type { BreedDetailsProps } from "../types";
 import styles from "../BreedDisplay.module.css";
+import { roundNum, kgToLbs } from "../../../utils/formatting";
 
 export type { BreedDetailsProps } from "../types";
 
@@ -16,10 +17,6 @@ export default function BreedDetails({
     group,
     temperament
 }: BreedDetailsProps) {
-    const roundNum = (num: number): number => Math.round(num * 10) / 10;
-
-    // Convert kg to lbs (1 kg = 2.20462 lbs)
-    const kgToLbs = (kg: number): number => kg * 2.20462;
 
     const popularityBucket = (rank: number): string => {
         if (rank <= 50) return 'Very popular';

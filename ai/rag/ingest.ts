@@ -1,7 +1,7 @@
-import { Index as UpstashIndex } from '@upstash/vector';
 import { parse } from 'csv-parse/sync';
 import fs from 'node:fs';
 import path from 'node:path';
+import { index } from './index.js';
 import type {
     DemeanorCategory,
     DogGroup,
@@ -12,8 +12,6 @@ import type {
     Temperment,
     TrainabilityCategory
 } from './types.js';
-
-const index = new UpstashIndex();
 
 const indexDogData = async () => {
     console.log('Reading dog data');

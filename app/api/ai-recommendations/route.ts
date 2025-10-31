@@ -5,39 +5,7 @@ import { QuestionaireAnswer } from "@/app/actions";
 import { queryDogBreeds } from "../../../ai/rag/query";
 import { buildFilterTiers, buildMatchedAttributes } from "../../../ai/tools/dogSearch/utils";
 import type { DogMetadata } from "../../../ai/rag/types";
-
-export interface DogRecommendation {
-    breed: string;
-    matchScore: number;
-    why?: string;
-    description?: string;
-    temperament?: string;
-    popularity?: number;
-    size?: {
-        height: { min: number; max: number; };
-        weight: { min: number; max: number; };
-    };
-    lifeExpectancy?: { min: number; max: number; };
-    group?: string;
-    grooming?: {
-        frequency: string;
-        value: string;
-        shedding: string;
-    };
-    energy?: {
-        level: string;
-        value: number;
-    };
-    trainability?: {
-        level: string;
-        value: number;
-    };
-    demeanor?: {
-        type: string;
-        value: number;
-    };
-    matchedAttributes?: any[];
-}
+import type { DogRecommendation } from "@/app/components/BreedDisplay/types";
 
 const filterParametersSchema = z.object({
     searchQuery: z.string().describe("A rich semantic search query combining living situation, activity preferences, family needs, and personality. Example: 'apartment friendly small dog low energy gentle temperament good with children'"),
@@ -168,8 +136,8 @@ export async function POST(req: Request) {
             breed: metadata.breed,
             description: metadata.description,
             temperament: Array.isArray(metadata.temperament)
-                ? metadata.temperament.join(', ')
-                : metadata.temperament,
+                ? metadata.temperament
+                : (metadata.temperament ? [metadata.temperament] : []),
             popularity: metadata.popularity,
             size: {
                 height: { min: metadata.minHeight, max: metadata.maxHeight },
@@ -223,10 +191,10 @@ export async function POST(req: Request) {
             }
         );
 
-        const recommendation = {
+        const recommendation: DogRecommendation = {
             breed: breedData.breed,
             matchScore,
-            why: `${breedData.breed} matches your preferences: ${breedData.temperament || 'good temperament'}, ${breedData.energy?.level || 'moderate energy'}, ${breedData.size?.height ? `${breedData.size.height.min}-${breedData.size.height.max}cm` : 'appropriate size'}.`,
+            why: `${breedData.breed} matches your preferences: ${Array.isArray(breedData.temperament) ? breedData.temperament.join(', ') : 'good temperament'}, ${breedData.energy?.level || 'moderate energy'}, ${breedData.size?.height ? `${breedData.size.height.min}-${breedData.size.height.max}cm` : 'appropriate size'}.`,
             description: breedData.description,
             temperament: breedData.temperament,
             popularity: breedData.popularity,

@@ -1,6 +1,6 @@
 "use client";
 
-import { Heading, Text, Flex, Button, Separator, Container } from "@radix-ui/themes";
+import { Heading, Text, Flex, Button, Separator } from "@radix-ui/themes";
 import styles from "./BreedDisplay.module.css";
 import BreedDetails from "./components/BreedDetails";
 import DogImage from "./components/DogImage";

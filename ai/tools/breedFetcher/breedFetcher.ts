@@ -33,7 +33,9 @@ export const breedFetcherTool = tool({
             const formattedBreed = {
                 breed: metadata.breed,
                 description: metadata.description,
-                temperament: metadata.temperament,
+                temperament: Array.isArray(metadata.temperament) 
+                    ? metadata.temperament 
+                    : (metadata.temperament ? [metadata.temperament] : []),
                 popularity: metadata.popularity,
                 size: {
                     height: { min: metadata.minHeight, max: metadata.maxHeight },

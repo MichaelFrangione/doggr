@@ -1,6 +1,4 @@
-import { Index as UpstashIndex } from '@upstash/vector';
-
-const index = new UpstashIndex();
+import { index } from './index';
 
 export const queryDogBreeds = async ({
     query,
