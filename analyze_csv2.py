@@ -33,3 +33,4 @@ row = rows[33]
 print(f"\nRow 34 (Cane Corso):")
 print(f"  min_weight: {row['min_weight']}, max_weight: {row['max_weight']}")
 
+

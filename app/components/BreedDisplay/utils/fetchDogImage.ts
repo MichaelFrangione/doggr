@@ -1,5 +1,3 @@
-const API_KEY = 'live_AQD9w7fehyOi4NlK9kXWS75rqPCF2BKRfHr78LyCZV6m86csi8RcC8iA6dBx9mx1';
-
 interface BreedSearchResponse {
     id: number;
     name: string;
@@ -20,6 +18,9 @@ export type FetchDogImageResult =
  * @returns Result object with success status and either URL or error message
  */
 export async function fetchDogImage(breedName: string): Promise<FetchDogImageResult> {
+
+    const API_KEY = process.env.THE_DOG_API_KEY;
+
     try {
         const searchResponse = await fetch(
             `https://api.thedogapi.com/v1/breeds/search?q=${encodeURIComponent(breedName.toLowerCase())}`,
