@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { renderWithProviders } from '../tests/renderWithProviders';
 import Home from './page';
 import { vi } from 'vitest';
-import * as nav from 'next/navigation';
+import { mockRouter } from '../tests/setup';
 
 // Mock Lottie component to avoid canvas dependency in jsdom
 vi.mock('./components/lottieImage', () => ({
@@ -20,7 +20,7 @@ describe('Home page', () => {
             screen.getByText(/Doggr is a tool that helps you find the perfect dog/i)
         ).toBeDefined();
         expect(
-            screen.getByRole('button', { name: /Find your perfect match now/i })
+            screen.getByRole('button', { name: /Take Questionnaire/i })
         ).toBeInTheDocument();
     });
 
@@ -28,12 +28,9 @@ describe('Home page', () => {
         const user = userEvent.setup();
         renderWithProviders(<Home />);
 
-        const cta = screen.getByRole('button', { name: /Find your perfect match now/i });
+        const cta = screen.getByRole('button', { name: /Take Questionnaire/i });
         await user.click(cta);
 
-        // Router is mocked in tests/setup.ts; assert push called with expected path
-        // Grab the mocked useRouter instance and assert push was called
-        const mockRouter: any = nav.useRouter();
         expect(mockRouter.push).toHaveBeenCalledWith('/questionaire');
     });
 });

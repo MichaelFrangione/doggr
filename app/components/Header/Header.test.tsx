@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import { renderWithProviders } from '../../../tests/renderWithProviders';
 import Header from './Header';
 import { expect, describe, test, vi } from 'vitest';
-import * as nav from 'next/navigation';
+import { mockUsePathname } from '../../../tests/setup';
 import userEvent from '@testing-library/user-event';
 import styles from './Header.module.css';
 
@@ -24,8 +24,7 @@ describe('Header', () => {
     });
 
     test('applies active class to current route link', async () => {
-        // Override pathname for this test
-        vi.spyOn(nav, 'usePathname').mockReturnValue('/breeds');
+        mockUsePathname.mockReturnValueOnce('/breeds');
 
         renderWithProviders(<Header />);
 
@@ -38,12 +37,12 @@ describe('Header', () => {
 
     test('clicking brand navigates home', async () => {
         const user = userEvent.setup();
-        const router: any = nav.useRouter();
+        const { mockRouter } = await import('../../../tests/setup');
 
         renderWithProviders(<Header />);
 
         await user.click(screen.getByRole('heading', { name: 'Doggr' }));
-        expect(router.push).toHaveBeenCalledWith('/');
+        expect(mockRouter.push).toHaveBeenCalledWith('/');
     });
 });
 
