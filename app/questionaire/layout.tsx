@@ -15,7 +15,7 @@ export default function QuestionaireLayout({
         <div className={styles.layout}>
             <Header />
             <main className={styles.main}>
-                <Container>{children}</Container>
+                {children}
                 <PeekingDog />
             </main>
             <footer className={styles.footer}>

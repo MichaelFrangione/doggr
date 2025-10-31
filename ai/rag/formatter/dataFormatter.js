@@ -1,5 +1,5 @@
-// Node script to extract unique lowercase words from traits.txt
-// and emit ai/rag/traits.unique.js exporting the array.
+// Node script to extract unique lowercase words from input.txt
+// and emit output.js exporting the array.
 
 const fs = require('fs');
 const path = require('path');

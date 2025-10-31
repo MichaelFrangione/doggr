@@ -42,21 +42,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem;
     padding-bottom: 3rem;
     text-align: center;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     min-height: 0;
 }
-
 
 .dogAnimation {
     pointer-events: none;
     height: 400px;
     width: 100%;
     transform: scaleX(-1);
+}
 
-    /* margin-bottom: -6em; */
+@media (max-width: 768px) {
+    .main {
+        padding: 1rem 3rem;
+        justify-content: flex-start;
+    }
+
+    .dogAnimation {
+        height: 250px;
+    }
 }
 
 .footer {

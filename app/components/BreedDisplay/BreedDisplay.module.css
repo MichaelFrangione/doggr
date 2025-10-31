@@ -4,12 +4,28 @@
     border-radius: 8px;
     border: 1px solid var(--gray-5);
     text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.breedContent {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.breedInfo {
+    flex: 1;
+    min-width: 0;
 }
 
 .matchedAttributeItem {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 .matchedAttributeLabel {
@@ -19,11 +35,19 @@
 .matchedAttributesContainer {
     margin-bottom: 24px;
     flex: 1 1 50%;
+    min-width: 0;
 }
 
 .breedDetailsContainer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     flex: 1 1 50%;
+    min-width: 0;
+}
+
+.detailsContent {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 .separator {
@@ -48,4 +72,38 @@
     flex-shrink: 0;
     overflow: hidden;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .breedCard {
+        padding: 1.5rem;
+        border-radius: 0;
+    }
+
+    .breedContent {
+        flex-direction: column;
+    }
+
+    .dogImageContainer {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .matchedAttributeLabel {
+        min-width: auto;
+    }
+
+    .matchedAttributeItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .detailsContent {
+        flex-direction: column;
+    }
+
+    .separator {
+        margin: 30px 0;
+    }
 }

@@ -11,19 +11,17 @@ export default function Header() {
 
     const isActive = (path: string) => pathname === path;
 
-    console.log(pathname);
-
     return (
         <header className={styles.header}>
             <Container>
-                <Flex direction="row" gap="2" justify="between" align="center">
+                <Flex direction="row" gap="2" justify="between" align="center" wrap="wrap" className={styles.headerContent}>
                     <div className={styles.headerTitle} onClick={() => router.push('/')}>
                         <img src="/logo.png" alt="Doggr" />
                         <Heading size="6" weight="bold" align="left">
                             Doggr
                         </Heading>
                     </div>
-                    <Flex direction="row" gap="4">
+                    <Flex direction="row" gap="4" className={styles.navLinks}>
                         <Link href="/questionaire" className={classNames(styles.headerLink, isActive('/questionaire') ? styles.active : '')}>
                             Questionaire
                         </Link>

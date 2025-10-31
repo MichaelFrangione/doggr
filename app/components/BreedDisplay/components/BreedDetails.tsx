@@ -18,8 +18,6 @@ export default function BreedDetails({
 }: BreedDetailsProps) {
     const roundNum = (num: number): number => Math.round(num * 10) / 10;
 
-    console.log(size, energy, grooming, trainability, lifeExpectancy, group, temperament, popularity);
-
     // Convert kg to lbs (1 kg = 2.20462 lbs)
     const kgToLbs = (kg: number): number => kg * 2.20462;
 

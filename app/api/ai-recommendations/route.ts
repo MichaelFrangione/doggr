@@ -39,7 +39,6 @@ export interface DogRecommendation {
     matchedAttributes?: any[];
 }
 
-// Define the filter schema for structured output
 const filterParametersSchema = z.object({
     searchQuery: z.string().describe("A rich semantic search query combining living situation, activity preferences, family needs, and personality. Example: 'apartment friendly small dog low energy gentle temperament good with children'"),
     temperamentTags: z.array(z.string()).describe("Array of temperament tags extracted from personality preferences (e.g., 'friendly', 'protective', 'calm', 'independent')"),

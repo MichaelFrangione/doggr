@@ -120,9 +120,7 @@ export const dogBreedSearchTool = tool({
                         type: metadata.demeanorCategory,
                         value: metadata.demeanorValue,
                     },
-                    popularity: metadata.popularity,
-                    // Include similarity score if available from vector search
-                    score: result.score,
+                    score: result.score, // similarity score from vector search
                 };
             });
 

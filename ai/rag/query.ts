@@ -13,7 +13,6 @@ export const queryDogBreeds = async ({
 }) => {
 
     try {
-        // Test with a simple filter first
         const queryParams: any = {
             data: query,
             topK,

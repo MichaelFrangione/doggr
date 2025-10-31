@@ -1,10 +1,12 @@
 "use client";
 
 import styles from "./page.module.css";
-import { Button, Text, Heading, Container } from "@radix-ui/themes";
+import { Button, Text, Heading, Container, Grid } from "@radix-ui/themes";
 import LottieImage from "./components/lottieImage";
 import happyDogAnimation from "./assets/happy_dog.json";
-import Steps from "./components/Steps/Steps";
+import checkedAnimation from "./assets/checked.json";
+import cuteDogAnimation from "./assets/cute_dog.json";
+import smilingDogAnimation from "./assets/smiling_dog.json";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -33,17 +35,72 @@ export default function Home() {
         </div>
         <div className={styles.howToUse}>
           <Heading size="8" weight="bold" align="center" mb="7">
-            How it works
+            Features
           </Heading>
-          <Steps />
-          <Button
-            size="4"
-            variant="solid"
-            color="cyan"
-            onClick={() => router.push('/questionaire')}
-          >
-            Find your perfect match now
-          </Button>
+          <Grid columns="3" gap="6" className={styles.featuresGrid}>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>
+                <LottieImage animationData={checkedAnimation} loop={true} autoplay={true} />
+              </div>
+              <Heading size="5" weight="bold" align="center" mb="3">
+                Smart Questionnaire
+              </Heading>
+              <Text size="3" align="center" color="gray" mb="4">
+                Answer a few questions about your lifestyle and preferences to get matched with your ideal breed using AI.
+              </Text>
+              <Button
+                size="3"
+                variant="solid"
+                color="cyan"
+                onClick={() => router.push('/questionaire')}
+                className={styles.chatButton}
+              >
+                Take Questionnaire
+              </Button>
+            </div>
+
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>
+                <LottieImage animationData={cuteDogAnimation} loop={true} autoplay={true} />
+              </div>
+              <Heading size="5" weight="bold" align="center" mb="3">
+                Breed Browser
+              </Heading>
+              <Text size="3" align="center" color="gray" mb="4">
+                Explore hundreds of dog breeds with detailed information, characteristics, and beautiful images.
+              </Text>
+              <Button
+                size="3"
+                variant="solid"
+                color="cyan"
+                onClick={() => router.push('/breeds')}
+                className={styles.chatButton}
+              >
+                Browse Breeds
+              </Button>
+            </div>
+
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>
+                <LottieImage animationData={smilingDogAnimation} loop={true} autoplay={true} />
+              </div>
+              <Heading size="5" weight="bold" align="center" mb="3">
+                AI Chat Assistant
+              </Heading>
+              <Text size="3" align="center" color="gray" mb="4">
+                Chat with Hiro, your personal AI assistant, to get answers about breeds, comparisons, and more.
+              </Text>
+              <Button
+                size="3"
+                variant="solid"
+                color="cyan"
+                onClick={() => router.push('/ask')}
+                className={styles.chatButton}
+              >
+                Chat with Hiro
+              </Button>
+            </div>
+          </Grid>
         </div>
       </main>
     </div>

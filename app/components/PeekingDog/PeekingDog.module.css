@@ -6,6 +6,12 @@
     height: 200px;
 }
 
+@media (max-width: 768px) {
+    .doggo {
+        display: none;
+    }
+}
+
 .doggo.slideIn {
     animation: slideIn 1s ease-in-out 5s forwards;
 }

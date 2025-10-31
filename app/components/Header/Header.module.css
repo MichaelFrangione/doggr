@@ -7,6 +7,10 @@
     align-self: start;
 }
 
+.headerContent {
+    width: 100%;
+}
+
 .headerTitle {
     display: flex;
     flex-direction: row;
@@ -39,4 +43,30 @@
 .headerLink.active {
     color: var(--cyan-10);
     font-weight: bold;
+}
+
+.navLinks {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .headerContent {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+    
+    .headerTitle {
+        justify-content: center;
+    }
+    
+    .navLinks {
+        gap: 1rem !important;
+        width: 100%;
+        justify-content: center;
+    }
 }

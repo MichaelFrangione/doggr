@@ -50,7 +50,7 @@ export default function BreedDetail() {
     }, [breedName]);
 
     const wrapper = (children: React.ReactNode) => (
-        <Container>
+        <Container px="4">
             <Flex mb="4" justify="start">
                 <Button
                     variant="ghost"

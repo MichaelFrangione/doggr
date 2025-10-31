@@ -1,6 +1,6 @@
 "use client";
 
-import { Heading, Text, Flex, Button, Separator } from "@radix-ui/themes";
+import { Heading, Text, Flex, Button, Separator, Container } from "@radix-ui/themes";
 import styles from "./BreedDisplay.module.css";
 import BreedDetails from "./components/BreedDetails";
 import DogImage from "./components/DogImage";
@@ -22,17 +22,17 @@ export default function BreedDisplay({ breed, onReset, showRecommendationHeader 
 
             <Flex gap="4" direction="column" align="stretch">
                 <div className={styles.breedCard}>
-                    <Flex direction="row" gap="8">
-                        <div>
+                    <div className={styles.breedContent}>
+                        <div className={styles.breedInfo}>
                             <Heading size="6" mb="4">
                                 {breed.breed}
                             </Heading>
                             {breed.matchScore != null && (
-                                <Flex direction="column" mb="3" className={styles.matchScoreContainer}>
+                                <div className={styles.matchScoreContainer}>
                                     <Text size="3" color="cyan" weight="bold">
                                         Match Score: {breed.matchScore}%
                                     </Text>
-                                </Flex>
+                                </div>
                             )}
                             {breed.description && (
                                 <Text size="3" color="gray" mb={showRecommendationInfo ? "4" : "0"}>
@@ -41,9 +41,9 @@ export default function BreedDisplay({ breed, onReset, showRecommendationHeader 
                             )}
                         </div>
                         <DogImage breed={breed.breed} className={styles.dogImageContainer} />
-                    </Flex>
+                    </div>
                     <Separator className={styles.separator} color="gray" />
-                    <Flex direction="row" gap="3" mt="6">
+                    <div className={styles.detailsContent}>
                         {showRecommendationInfo && (
                             <RecommendationInfo
                                 matchedAttributes={breed.matchedAttributes}
@@ -59,9 +59,9 @@ export default function BreedDisplay({ breed, onReset, showRecommendationHeader 
                             temperament={breed.temperament}
                             popularity={breed.popularity}
                         />
-                    </Flex>
+                    </div>
                 </div>
-            </Flex>
+            </Flex >
 
             {onReset && (
                 <Button mt="6" variant="outline" color="cyan" size="4" onClick={onReset}>

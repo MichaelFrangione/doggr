@@ -5,9 +5,41 @@
     border: 1px solid var(--gray-5);
     text-align: left;
     transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
 }
 
 .recommendationCard:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.matchedAttributeItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.matchedAttributeLabel {
+    min-width: 200px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .recommendationCard {
+        padding: 1.5rem;
+        border-radius: 0;
+    }
+    
+    .matchedAttributeLabel {
+        min-width: auto;
+        flex-shrink: 1;
+    }
+    
+    .matchedAttributeItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

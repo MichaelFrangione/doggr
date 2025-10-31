@@ -8,7 +8,7 @@ export const fetchBreedById = async (breedName: string) => {
             includeMetadata: true,
             includeData: true,
         });
-        return result[0]; // Returns single result
+        return result[0];
     } catch (error) {
         console.error('Upstash fetch error:', error);
         throw error;

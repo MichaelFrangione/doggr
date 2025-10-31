@@ -24,8 +24,6 @@ export default function DogImage({ breed, className }: DogImageProps) {
             setImageUrl(null);
 
             const result = await fetchDogImage(breed);
-            console.log('Result:', result);
-
 
             if (!result.success) {
                 setLoading(false);

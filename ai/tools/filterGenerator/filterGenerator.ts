@@ -55,10 +55,9 @@ IMPORTANT:
         })).describe("Array of question and answer pairs from the questionnaire")
     }),
 
-    execute: async ({ questionsAndAnswers }: { questionsAndAnswers: QuestionaireAnswer[] }) => {
+    execute: async ({ questionsAndAnswers }: { questionsAndAnswers: QuestionaireAnswer[]; }) => {
         console.log('=== FILTER GENERATOR TOOL CALLED ===');
-        console.log('Questions count:', questionsAndAnswers.length);
-        
+
         try {
             // Build filter parameters based on questionnaire answers
             const searchTerms: string[] = [];
@@ -204,7 +203,7 @@ IMPORTANT:
 
             console.log('Generated filters:', result);
             console.log('=== FILTER GENERATOR TOOL END ===');
-            
+
             return result;
         } catch (error) {
             console.error('Filter generator error:', error);

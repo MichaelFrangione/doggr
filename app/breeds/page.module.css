@@ -1,0 +1,23 @@
+.container {
+    padding: 2rem;
+}
+
+.searchContainer {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.breedsGrid {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .searchContainer {
+        width: 100%;
+    }
+}
