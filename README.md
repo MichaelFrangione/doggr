@@ -266,7 +266,3 @@ This project was built as a technical demonstration showcasing:
 - Complex problem-solving with progressive algorithms
 - Clean, maintainable code architecture
 - Comprehensive testing strategies
-
-## 📄 License
-
-Private proje
