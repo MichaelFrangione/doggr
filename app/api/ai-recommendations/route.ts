@@ -15,10 +15,12 @@ const filterParametersSchema = z.object({
     sheddingMaxValue: z.number().optional().describe("Maximum shedding value on 0-1 scale (lower is better for allergies, typically 0.4)"),
     groomingMaxValue: z.number().optional().describe("Maximum grooming value on 0-1 scale (lower is better, typically 0.4)"),
     weightMinKg: z.number().optional().describe("Minimum weight in kg (e.g., 4.5 for small dogs, 22 for large)"),
-    weightMaxKg: z.number().nullable().optional().describe("Maximum weight in kg (e.g., 11.5 for small dogs, 44 for large). May be null when unconstrained."),
+    weightMaxKg: z.number().optional().describe("Maximum weight in kg (e.g., 11.5 for small dogs, 44 for large)"),
     minTrainabilityValue: z.number().optional().describe("Minimum trainability on 0-1 scale (typically 0.6 for easier training)"),
     popularityMaxRank: z.number().optional().describe("Maximum popularity rank (1=most popular). Lower is more popular. Default tiered caps are 50/100/150/any"),
 });
+
+type FilterParameters = z.infer<typeof filterParametersSchema>;
 
 const filterGenerationPrompt = `You are a dog breed search expert. Analyze the user's questionnaire answers and generate precise filter parameters.
 
@@ -68,12 +70,8 @@ export async function POST(req: Request) {
 
         console.log('AI filter generation completed');
 
-        // Extract filter parameters from structured result and normalize nulls to undefined
-        const rawFilters = result.object as any;
-        const filterInputs = {
-            ...rawFilters,
-            weightMaxKg: rawFilters.weightMaxKg ?? undefined,
-        };
+        // Extract filter parameters from structured result
+        const filterInputs: FilterParameters = result.object;
         console.log('Filter inputs:', filterInputs);
 
         // Build tiered filters using existing utility
@@ -81,7 +79,12 @@ export async function POST(req: Request) {
         console.log('Built', filterTiers.length, 'filter tiers');
 
         // Perform popularity-first tiered search
-        let bestResult: any | null = null;
+        interface BreedSearchResult {
+            metadata: DogMetadata;
+            score: number;
+        }
+
+        let bestResult: BreedSearchResult | null = null;
         let usedTier = 0;
         let usedCap: number | undefined = undefined;
 
@@ -95,20 +98,21 @@ export async function POST(req: Request) {
                 const results = await queryDogBreeds({
                     query: filterInputs.searchQuery,
                     topK: 8,
-                    filter: filter || undefined,
+                    filter: filter,
                 });
 
                 if (results && results.length > 0) {
                     // Pick lowest popularity (most popular). Tie-break by highest score
-                    const candidate = results.reduce((acc: any, cur: any) => {
+                    const candidate = results.reduce((acc: BreedSearchResult | null, cur) => {
+                        const typedCur = cur as unknown as BreedSearchResult;
                         const accRaw = acc?.metadata?.popularity;
-                        const curRaw = cur?.metadata?.popularity;
+                        const curRaw = typedCur?.metadata?.popularity;
                         const accPop = typeof accRaw === 'number' && accRaw > 0 ? accRaw : Number.MAX_SAFE_INTEGER;
                         const curPop = typeof curRaw === 'number' && curRaw > 0 ? curRaw : Number.MAX_SAFE_INTEGER;
-                        if (curPop < accPop) return cur;
-                        if (curPop === accPop) return (cur.score ?? 0) > (acc.score ?? 0) ? cur : acc;
+                        if (curPop < accPop) return typedCur;
+                        if (curPop === accPop) return (typedCur.score ?? 0) > (acc?.score ?? 0) ? typedCur : acc;
                         return acc;
-                    }, null as any);
+                    }, null);
 
                     bestResult = candidate;
                     usedTier = i + 1;
@@ -128,9 +132,8 @@ export async function POST(req: Request) {
         }
 
         // Format the selected result
-        const topResult = bestResult;
-        const metadata = topResult.metadata as DogMetadata;
-        const similarityScore = topResult.score || 0;
+        const metadata = bestResult.metadata;
+        const similarityScore = bestResult.score || 0;
 
         const breedData = {
             breed: metadata.breed,
@@ -149,10 +152,6 @@ export async function POST(req: Request) {
                 frequency: metadata.groomingFrequencyCategory,
                 value: String(metadata.groomingFrequencyValue),
                 shedding: metadata.sheddingCategory,
-            },
-            shedding: {
-                category: metadata.sheddingCategory,
-                value: String(metadata.sheddingValue),
             },
             energy: {
                 level: metadata.energyLevelCategory,
@@ -202,7 +201,6 @@ export async function POST(req: Request) {
             lifeExpectancy: breedData.lifeExpectancy,
             group: breedData.group,
             grooming: breedData.grooming,
-            shedding: breedData.shedding,
             energy: breedData.energy,
             trainability: breedData.trainability,
             demeanor: breedData.demeanor,

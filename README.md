@@ -53,11 +53,11 @@ The application uses Retrieval Augmented Generation (RAG) to provide accurate br
 To handle the zero-results problem with strict user preferences, Doggr implements a 5-tier progressive relaxation strategy:
 
 ```typescript
-Tier 1: All filters applied
-Tier 2: Skip temperament tags (too restrictive)
-Tier 3: Only numeric filters (energy, shedding, grooming, weight)
-Tier 4: Only essential filters (weight, trainability)
-Tier 5: Pure semantic search (no filters)
+// Tier 1: All filters
+// Tier 2: No temperament tags
+// Tier 3: Only numeric filters
+// Tier 4: Weight + trainability only
+// Tier 5: No filters (semantic search only)
 ```
 
 Additionally, a popularity-first approach prioritizes well-known breeds:

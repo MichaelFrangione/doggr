@@ -64,8 +64,8 @@ const buildMetadataFilter = ({
 
 
 // Build progressively relaxed filters
-export const buildFilterTiers = (inputs: FilterInputs): string[] => {
-    const tiers: string[] = [];
+export const buildFilterTiers = (inputs: FilterInputs): (string | undefined)[] => {
+    const tiers: (string | undefined)[] = [];
 
     // Tier 1: All filters
     const fullFilter = buildMetadataFilter(inputs);
@@ -117,7 +117,7 @@ export const buildFilterTiers = (inputs: FilterInputs): string[] => {
     }
 
     // Tier 5: No filter (just semantic search)
-    tiers.push('');
+    tiers.push(undefined);
 
     return tiers;
 };
