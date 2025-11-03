@@ -153,7 +153,7 @@ The AI system prompt instructs Hiro to use specific markdown formatting for bree
 6. **Interactive Refinement** - Allow users to adjust match preferences after seeing results with real-time re-ranking
 7. **Mixed-Breed Search** - Curerntly Doggr only understands full-breed dog breeds, It should support mixed-breeds such as Cockapoos and Pomskis and Labradoodles
 
-## 📋 Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 
