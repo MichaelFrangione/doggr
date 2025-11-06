@@ -73,7 +73,7 @@ Comprehensive test coverage with environment-specific configurations:
 - **MSW**: Mock Service Worker for API route testing
 - **Environment Isolation**: API tests run in Node.js, UI tests in jsdom
 
-## 🔧 Challenges Overcome
+## Challenges Overcome
 
 ### 1. Taxonomy-Based Search Balance
 
@@ -143,7 +143,7 @@ The AI system prompt instructs Hiro to use specific markdown formatting for bree
 **Solution**: Integrated `lottie-react` for lightweight, scalable animations:
 - Vector-based graphics that scale perfectly
 
-## 🚀 Future Improvements
+## Future Improvements
 
 1. **Multiple Breed Recommendations** - Show top 3-5 matches with side-by-side comparison instead of single result
 2. **Advanced Breed List** - Add filters (breed group, weight range, energy level), sorting options, debounced search, and alphabetical grouping
@@ -151,8 +151,9 @@ The AI system prompt instructs Hiro to use specific markdown formatting for bree
 4. **Breeder Integration** - Display AKC-certified breeders on breed detail pages with contact information and reviews. Hiro can assist in locating breeders by location.
 5. **Improved Matching Algorithm** - Implement weighted scoring (must-haves vs. nice-to-haves), negative filtering (deal-breakers).
 6. **Interactive Refinement** - Allow users to adjust match preferences after seeing results with real-time re-ranking
+7. **Mixed-Breed Search** - Curerntly Doggr only understands full-breed dog breeds, It should support mixed-breeds such as Cockapoos and Pomskis and Labradoodles
 
-## 📋 Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 
@@ -217,7 +218,7 @@ npm run build
 npm start
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 doggr/
@@ -258,7 +259,7 @@ doggr/
 └── package.json                  # Dependencies
 ```
 
-## 🤝 Contributing
+## Contributing
 
 This project was built as a technical demonstration showcasing:
 - Modern full-stack development with Next.js and React
@@ -266,7 +267,3 @@ This project was built as a technical demonstration showcasing:
 - Complex problem-solving with progressive algorithms
 - Clean, maintainable code architecture
 - Comprehensive testing strategies
-
-## 📄 License
-
-Private proje
